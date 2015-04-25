@@ -74,6 +74,10 @@
 
 \section{Risk analysis}
 
+
+% % % % % % % % % % Product engineering 
+
+
 \begin{risk}{Change of the requirements}
 
 \riskcat Requirements
@@ -124,6 +128,92 @@
 
 \riskimpact Low - 2. If the system can't accommodate all the requests, a hardware upgrade will probably be enough.
 \end{risk}
+
+
+% % % % % Code and Unit Test
+
+% Feasibility
+\begin{risk}
+\riskcat Design
+
+\riskdesc We haven't defined the algorithm to automatically assign task to workers.
+
+\riskprob{100} We will have to deal with it for sure.
+
+\riskimpact{Medium - 3} If we don't prevent this risk, the programmers will have to spend time in defining this algorithm and the project may be delayed. 
+
+\end{risk}
+
+\begin{risk}
+\riskcat Design
+
+\riskdesc We haven't defined the algorithm to automatically assign priority to reports.
+
+\riskprob{100} We will have to deal with it for sure.
+
+\riskimpact{Medium - 3} If we don't prevent this risk, the programmers will have to spend time in defining this algorithm and the project may be delayed. 
+
+\end{risk}
+
+% Testing
+\begin{risk}
+\riskcat Design 
+\riskdesc We haven't designed the test plan.
+\riskprob{100} We will have to deal with it for sure.
+\riskimpact{Low - 2} If we don't prevent this risk, the programmers will have to spend time in defining the test plan and the project may be delayed but as we have planned enough time for testing, this shouldn't impact too much in the timing of the project.
+\end{risk}
+
+% % % Integration and Test
+
+% Environment
+\begin{risk}
+\riskcat Design
+\riskdesc  It will be difficult to develop realistic multi-user interaction for testing response requirements.
+\riskprob{100} We will have to deal with it for sure.
+\riskimpact{Very low - 1} We can apply statistics as we are used to do in SGNIP to estimate responses time in multi-user interaction scenarios.
+\end{risk}
+
+%Product
+
+\begin{risk}
+\riskcat 
+\riskdesc We haven't agreed an acceptance criteria in a formal agreement for all requirements.
+\riskprob{20} It is not very probable that UAM disagrees with us about the acceptance of requirements because of all the meetings we have had and the approve meanwhile.
+\textcolor{red}{Check grammar}
+% % % % % % % TODO:  Meanwhile¿¿?? I used gtraductor and i not very convinced.
+\riskimpact{Low} Even if there is not a formal agreement, UAM has approved the requirements so it shouldn't cause us a big problem. 
+\end{risk}
+
+% % % % TODO: System i don't know what to say. (Questions 55-59)
+
+
+% Maintainability
+%\begin{risk}
+%\riskcat Design
+%\riskdesc Web developing can change within the years and that could difficult maintainability because maintenance people may have to change code to adapt the system to new specifications.
+%\riskprob{20} When some new web standard is released it maintain compatibility with older systems.
+%\riskimpact{}
+%\end{risk}
+
+
+% % % % % % % % % % % % % % % % % % Development Environment
+
+%\begin{risk}
+%\riskcat Development Environment
+%\riskdesc We haven't defined requirements traceability that tracks requirements from source specification through test cases.
+%\riskprob{70}  
+%\riskimpact{}
+%\end{risk}
+
+% i jump from 117 to 142 because there are all questions about how we work in the company and i don't know anything and i don't want to invent either so, i go through.
+
+\begin{risk}
+\riskcat
+\riskdesc
+\riskprob{}
+\riskimpact{}
+\end{risk}
+
 
 \section{Risk management}
 \subsection{Risk 1 - Title}
