@@ -160,7 +160,7 @@
 \riskcat Design 
 \riskdesc We haven't designed the test plan.
 \riskprob{100} We will have to deal with it for sure.
-\riskimpact{Low - 2} If we don't prevent this risk, the programmers will have to spend time in defining the test plan and the project may be delayed but as we have planned enough time for testing, this shouldn't impact too much in the timing of the project.
+\riskimpact{High - 4} The programmers will have to spend time in defining the test plan and it may be not as extensive and exhaustive as a test plan done by designers. It may also affect to the project duration because testers will have to define the test plan on the go.
 \end{risk}
 
 % % % Integration and Test
@@ -207,11 +207,29 @@
 
 % i jump from 117 to 142 because there are all questions about how we work in the company and i don't know anything and i don't want to invent either so, i go through.
 
+
+% % % % % % % Program constraints. 
 \begin{risk}
-\riskcat
-\riskdesc
-\riskprob{}
-\riskimpact{}
+\riskcat Development Environment
+\riskdesc There may be communication problems because we have subcontracted 2 enterprise to help us with the development of the system.
+\riskprob{30} We are used to deal with subcontracted enterprises so we know how to deal with communication issues. It is not very probable to happen.
+\riskimpact{Medium - 3} When people working together can't communicate properly the development get delayed and looses quality.
+\end{risk}
+
+
+\begin{risk}
+\riskcat Development Environment.
+\riskdesc As we are working with 2 subcontracted enterprises, we will have to take care of assigning task and submodules to developers.
+\riskprob{100} We will have to deal with it for sure.
+\riskimpact{Low - 2} It is not a very big problem because the project leader has to assign task even if there are not subcontracted, so this just make his job a bit harder.
+\end{risk}
+
+
+\begin{risk}
+\riskcat Development Environment.
+\riskdesc As we will not codify all submodules, integration test can get complicated.
+\riskprob{50} If every worker sticks to the project plan, to the the analysis and to the design we should get too much work in integration test.
+\riskimpact{Medium - 3} When integration test fails and we have to check someone else's code it get hard to get the integration done.
 \end{risk}
 
 
