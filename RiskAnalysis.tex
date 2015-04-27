@@ -1,4 +1,4 @@
-\documentclass[11pt]{article}
+\documentclass[11pt]{report}
 
 \usepackage{fancyhdr} % Cabeceras de página
 \usepackage{lastpage} % Módulo para añadir una referencia a la última página
@@ -29,7 +29,7 @@
 \setcounter{secnumdepth}{2}
 \renewcommand{\baselinestretch}{1.4}
 
-\title{UAM Software Notification and Damage Management System \\ Project Plan}
+\title{UAM Software Notification and Damage Management System \\ Fault Manager Lite \\ Risk Management and Planning Document}
 \date{\today}
 \author{{\Large Triforce} \\ \vspace{5pt} \textit{Iván Márquez Pardo, Víctor de Juan Sanz, Guillermo Julián Moreno}}
 
@@ -64,68 +64,52 @@
 \maketitle
 \tableofcontents
 \newpage
-\section{Introduction}
+\chapter{Introduction}
 
-\section{References}
+\chapter{References}
 
-\section{Project definition}
+\chapter{Project definition}
 
-\section{Estimation, Planning and important requirements}
+\chapter{Estimation, Planning and important requirements}
 
-\section{Risk analysis}
+\chapter{Risk analysis}
 
 
 % % % % % % % % % % Product engineering 
 
-
+%
 \begin{risk}{Change of the requirements}
-
 \riskcat Requirements
-
 \riskdesc As in every software project, requirements may be subject to change if the client identifies new needs or clarifies previously requested features.
-
 \riskprob{30}.
-
 \riskimpact Very low - 1. Given that the requirements have been already approved by the client in the requirement analysis document.
 \end{risk}
-
+%
 \begin{risk}{Localization inside buildings}
 \riskcat Design
-
 \riskdesc The design of a system that can locate an user is a difficult task. In the design stage, we can find that this is actually an impossible tasks even when our preliminary analysis revealed that it cloud be done.
-
 \riskprob{60}
-
 \riskimpact High - 3.5. If the design can't be done, the requirements and design will need to be redone and there will be penalizations from the client.
 \end{risk}
-
+%
 \begin{risk}{Changes in the interface with the mobile phones}
 \riskcat Design
-
 \riskdesc One of your target system are mobile phone operating systems. These are constantly changing and one of these changes may affect our project, either because of changed APIs or new or deprecated features.
-
 \riskprob{70}
-
 \riskimpact Low - 1. Even when it's probable that there's an update during the development of the project, it will probably consist of minor changes and won't break compatibility.
 \end{risk}
-
+%
 \begin{risk}{Error-prone UAM's auth server interface}
 \riskcat Design
-
 \riskdesc We don't completely trust that the interface with the UAM authentication server is well defined and correct. A defensive programming approach may be necessary.
-
 \riskprob{30}
-
 \riskimpact Low - 2. If this risk materializes we will need to change our programming interfaces and extend the testing phase.
 \end{risk}
-
+%
 \begin{risk}{Unknown required performance}
 \riskcat Design
-
 \riskdesc We haven't estimated the number of users that will access the system at once. This means that there's a possibility that our server becomes overwhelmed with requests and can't attend them all.
-
 \riskprob{10} There's a low possibility that this kind of system becomes overloaded enough to require changes in the architecture or hardware.
-
 \riskimpact Low - 2. If the system can't accommodate all the requests, a hardware upgrade will probably be enough.
 \end{risk}
 
@@ -133,26 +117,19 @@
 % % % % % Code and Unit Test
 
 % Feasibility
+%
 \begin{risk}{Algorithm to assign task not defined}
 \riskcat Design
-
 \riskdesc We haven't defined the algorithm to automatically assign task to workers.
-
 \riskprob{100} We will have to deal with it for sure.
-
 \riskimpact{Medium - 3} If we don't prevent this risk, the programmers will have to spend time in defining this algorithm and the project may be delayed. 
-
 \end{risk}
-
+%
 \begin{risk}{Algorithm to assign priority not defined}
 \riskcat Design
-
 \riskdesc We haven't defined the algorithm to automatically assign priority to reports.
-
 \riskprob{100} We will have to deal with it for sure.
-
 \riskimpact{Medium - 3} If we don't prevent this risk, the programmers will have to spend time in defining this algorithm and the project may be delayed. 
-
 \end{risk}
 
 % Testing
@@ -216,7 +193,7 @@
 \riskimpact{Medium - 3} When people working together can't communicate properly the development get delayed and looses quality.
 \end{risk}
 
-
+%
 \begin{risk}{Subcontracted companies - Assigning task}
 \riskcat Development Environment.
 \riskdesc As we are working with 2 subcontracted companies, we will have to take care of assigning task and submodules to developers.
@@ -224,14 +201,14 @@
 \riskimpact{Low - 2} It is not a very big problem because the project leader has to assign task even if there are not subcontracted, so this just make his job a bit harder.
 \end{risk}
 
-
+%
 \begin{risk}{Subcontracted companies - Integration test}
 \riskcat Development Environment.
 \riskdesc As we will not codify all submodules, integration test can get complicated.
 \riskprob{50} If every worker sticks to the project plan, to the the analysis and to the design we should get too much work in integration test.
 \riskimpact{Medium - 3} When integration test fails and we have to check someone else's code it get hard to get the integration done.
 \end{risk}
-
+%
 \begin{risk}{Money and time limitation}
 \riskcat Program constraints.
 \riskdesc The timing has been limited in time and money. We may have to cancel the project.
@@ -248,9 +225,13 @@
 \end{risk}
 
 
+\section{Risk Identification}
+\input{tex/RiskIdentification.tex}
 
+\section{Risk Estimation}
+\input{tex/RiskEstimation.tex}
 
-\section{Risk management}
+\chapter{Risk management}
 
 \subsection{Risk 1 - Change of the requirements}
 \subsection{Risk 2 - Localization inside buildings}
@@ -278,13 +259,13 @@ We have to reestimate also the time and money spend in defining this test plan.
 
 
 
-\section{Risk monitoring}
+\chapter{Risk monitoring}
 
 
-\section{Conclusions}
+\chapter{Conclusions}
 
 \appendix
 
-\section{Riskology tool}
+\chapter{Riskology tool}
 
 \end{document}

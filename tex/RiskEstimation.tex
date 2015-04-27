@@ -1,0 +1,326 @@
+
+In this section, we analyze each of the risks we have identified in the previous section. We have split the analysis into two subsections: in the first one, we estimate their probability of ocurrence, while in the second we estimate the impact they have and consequences they may cause.
+
+\subsection{Estimation of the probability of each risk ocurrence}
+The probability of ocurrence of each risk has been valued from 0 to 1, attending to this scale:
+\begin{itemize}
+\item Very Low Probability: 0,1-0,2 (10\%-20\%).
+\item Low Probability: 0,3-0,4 (30\%-40\%).
+\item Medium Probability: 0,5-0,6 (50\%-60\%).
+\item High Probability: 0,7-0,8 (70\%-80\%).
+\item Very High Probability: 0,9 (90\%).
+\end{itemize}
+
+
+\begin{risk}{Frequent change of the requirements}
+\riskcat Requirements
+\riskprob{40} - Low Probability 
+
+The FML project plan has already been aproved by the customer. In this document, we completely specify and detail the functional and non-functional requirements of the application. As we received the approval from the customer, we don't expect many changes of the requirements, although we can't completely discard the possibility yet as the customers may come up with new ideas or changes as they start testing the deliverables.
+\end{risk}
+
+\begin{risk}{Negative attitude of final users with respect to the system}
+\riskcat Project conclussion
+\riskprob{20} - Very Low Probability 
+
+In the Triforce company, we develop applications taking into account the intended final users and their opinions and suggestions we get from them during the demonstration of the application, near the end of project development. It is unlikely that this risk happens. 
+
+If we don't make our application enough user-friendly and appealing to the users that they start and continue using it, it will have to be considered a failure. 
+\end{risk}
+
+\begin{risk}{Unexpected necessary features}
+\riskcat Requirements
+\riskprob{30} - Low Probability 
+
+The FML project plan has already been aproved by the customer. Despite this and the fact that we have carefully revised that document too, we are conscious that during the development we might encounter unexpected new features that are necessary and we had not realized they existed.
+\end{risk}
+
+\begin{risk}{Developed software does not meet customers' expectations}
+\riskcat Project conclussion
+\riskprob{10} - Very Low Probability 
+
+In the Triforce company, we try to stay in contact with our customers and we also ask for their aproval on interface mock-ups and prototypes. To date, we have never received a complain from a customer, but we don't discard this risk.
+
+The customer of the FML project in particular will receive a deliverable at the end of each development increment, being able to ask for interface or functionality changes before they grow and become more difficult to fix them.
+\end{risk}
+
+\begin{risk}{Localization inside buildings}
+\riskcat Requirements
+\riskprob{70} - High Probability 
+
+We have no first-hand experience with the GPS technology and its limitations, so it is likely that we expected too much from it when saying that it could give us the location of the users inside of the campus buildings.
+\end{risk}
+
+\begin{risk}{Error-prone UAM's authentication server interface}
+\riskcat External sources
+\riskprob{50} - Medium Probability 
+
+We don't really know the quality and security that the UAM's Authentication Server offers to those applications that connect to it. With no information about this issue, we assign it medium probability.
+
+Further investigation on this issue should be done before knowing the real impact it has on out project. If this risk materializes we will need to change our programming interfaces and extend the testing phase. With no information about this issue, we assign it medium impact.
+\end{risk}
+
+\begin{risk}{Changes in the interface with mobile phones}
+\riskcat Software development
+\riskprob{70} - High Probability 
+
+Mobile phones are constantly updating and changing their specificiations and interfaces, so it is quite likely that they change during the development of the project (and later, during the maintenance).
+\end{risk}
+
+\begin{risk}{Lack of precedentness}
+\riskcat Software development
+\riskprob{90} - Very High Probability 
+
+It is highly likely that we will have to deal with problems either with the type of this application or with the underlying technical architecture, as our technical staff does not have any experience in these fields.
+
+The later we start working on the project at 100\%, at our maximum abilities and performance, the more likely is that we are delayed with respect to the whole schedule and not being able to finish the project on time.
+\end{risk}
+
+\begin{risk}{Difficulty on defining algorithms}
+\riskcat Requirements
+\riskprob{30} - Low Probability 
+
+Our technical staff has no experience with this particular type of application, but it should be noted that they have performed especially well on previous projects whose algorithms were more complex than the ones of this project. This risk is not likely to happen.
+
+In spite of having much experience defining algorithms, if we had underestimated their complexity and they required more time than the expected, our designer could be working on them while the programmers leave their implementation to the last moment of the coding phase. In the worst case, the algorithms could cause delays in the project schedule.
+\end{risk}
+
+\begin{risk}{Problems with real time events/notifications}
+\riskcat Sotware development
+\riskprob{20} - Low Probability 
+
+Real time events or notifications are a quite delicate issue to deal with, but the amount of users connected at the same time to the application relaxes this condition of real time, lowering the probability of having problems with their performance.
+
+Real time events are more a desirable characteristic than a mandatory one, so even if we find that we are having some troubles achieving a good performance on them, the impact will be low (for example, notifying that a task repair has been completed would take a whole minute instead of seconds, which is not very critical).
+\end{risk}
+
+\begin{risk}{Higher number of users than expected}
+\riskcat Estimation
+\riskprob{30} - Low Probability 
+
+We are optimistic on the number of users the application will have. However, we don't expect that the number of people in the campus connected to our application at the same time, surpasses the estimation of 1,000 people. There's a low possibility that this kind of system becomes overloaded enough to require changes in the architecture or hardware.
+
+If the system becomes so successful that many people collaborates with the maintenance service and our server can't handle all the requests, a hardware update or an increment on the server parallelism will probably be enough.
+\end{risk}
+
+\begin{risk}{First collaboration with subcontracted companies}
+\riskcat Personnel management
+\riskprob{80} - High Probability 
+
+It is the first time that we work together with other two subcontracted companies, so at first it is highly likely that we can have problems defining common working procedures.
+
+We know nothing about those two companies. We don't know how they work or the capabilities they have. It is often difficult to coordinate workers in a single team, so coordinate efforts between three companies, it is even more difficult. Moreover, we have a tight delivery date, so we can't wait until perfectly knowing each other.
+\end{risk}
+
+\begin{risk}{System failures in design during integration tests}
+\riskcat Project conclusion
+\riskprob{60} - Medium Probability 
+
+Every subcontracted company will implement their own modules of the application and perform unit testing on them. As it is the first time we collaborate, we don't know their abilities, and the integration tests might fail as a result of a bad design or bad unit testing.
+
+Failures in integration tests will make us revise modules we have not implemented looking for mistakes instead of continuing with the schedule, delaying it in a significant way.
+\end{risk}
+
+\begin{risk}{Inefficient task assignment and coordination with subcontracted companies}
+\riskcat Supervision and Monitoring
+\riskprob{70} - High Probability 
+
+The division of work into tasks that are the least related possible to each other might be quite complicated. Achieving it and dividing those tasks between us and the subcontracted companies will be useless without the delivery of feedback in order to supervise the advances of the project.
+
+Convenient assignment of tasks is crutial if we don't want to be working on the same thing twice or be unproductive. If we don't coordinate efforts with the other two companies, last minute delays may appear and cause a global delay on the project.
+\end{risk}
+
+\begin{risk}{Poor management and planning decisions}
+\riskcat Supervision and Monitoring
+\riskprob{40} - Low Probability 
+
+Our technical staff has previously worked together in other projects of Triforce, so they already know each other and we think that the information should easily flow. Project planning and task assigment would need more control as the duration of the project is tight. If personnel rotations happens, this risk will increase its probability.
+
+Uncoordinated or useless efforts caused by lack of information feedback and supervisions result in last term on delays of the whole project. Personnel rotations might have great impact on the planning, as they won't be assigned complex tasks until they know better the conditions of the project; revising the whole planning will be needed in this case.
+\end{risk}
+
+%% NOT ENDED YET
+\begin{risk}{Delays in the calendar}
+\riskcat Supervision and Monitoring
+\riskprob{70} - High Probability 
+
+The division of work into tasks that are the least related possible to each other might be quite complicated. Achieving it and dividing those tasks between us and the subcontracted companies will \end{risk}
+
+\begin{risk}{Excess of budget expenses}
+\riskcat Supervision and Monitoring
+\riskprob{70} - High Probability 
+
+The division of work into tasks that are the least related possible to each other might be quite complicated. Achieving it and dividing those tasks between us and the subcontracted companies will 
+\end{risk}
+
+\begin{risk}{Difficulties in maintaining the team united and motivated}
+\riskcat Project conclusion
+\riskprob{20} - Low Probability 
+
+Our technical staff has previously worked together in other projects of Triforce: the information flow between members was acceptable and no big arguments were reported. However, we expect that the team might be under pressure (specially in late development stages), so we have to take this into account.
+
+If some members have big arguments, they will tend to lose their concentration on the project and their performance will be affected. The same happens to those members demotivated or depressed. This risk is specially critical in late stages of the project development.
+\end{risk}
+
+\begin{risk}{Poor quality of the product}
+\riskcat Project conclusion
+\riskdesc Due to time and budget restrictions, the quality of the final product might be affected, which means that a re-work is needed. This problem also applies to the deliveries planified on the set of milestones.
+\end{risk}
+
+\begin{risk}{High rotation of personnel}
+\riskcat Personnel management
+\riskdesc The staff assigned to this project may suffer from rotations due to external causes that we can't control. We might have to deal with changes in the members of the development team, avoiding significant delays in the project duration.
+\end{risk}
+
+\begin{risk}{Underestimation of personnel needed}
+\riskcat Estimation
+\riskdesc During the development of the project, when revising the proportion of the project that we have done and the time we have spent on it, we might realize that we won't be able to finish it on time as a result of an underestimation of personnel needed. 
+\end{risk}
+
+\begin{risk}{Non-specific assignment of responsibilities}
+\riskcat Personnel management
+\riskdesc If roles of the team members and authorities are not well defined in the early stages of the development, the responsibility for problems that appear later won't be easily assigned anybody. Also, if disagreements appear in the team, there won't be a single person to decide the best solution (leading to the implementation of several different solutions at a time).
+\end{risk}
+
+\begin{risk}{Limited budget}
+\riskcat Estimation
+\riskdesc We have a 10\% less budget than the budget we had estimated in the FML Project Plan. Therefore, our budget is 114,120\euro (our estimation was 126,800\euro). In case we cannot deal with this limitation, the project might be cancelled.
+\end{risk}
+
+\begin{risk}{Limited duration}
+\riskcat Estimation
+\riskdesc The duration of the project must be a 10\% less than the duration we had estimated in the FML Project Plan. Therefore, our duration is 126 days (our estimation was 140 days). In case we cannot deal with this limitation, the project might be delayed or even cancelled.
+\end{risk}
+
+
+
+\subsection{Estimation of the consequences of each risk}
+
+The impact of each risk has been valued from 0 to 1, attending to this scale:
+\begin{itemize}
+\item Very Low Impact: 0,1.
+\item Low Impact: 0,2.
+\item Medium Impact: 0,3.
+\item High Impact: 0,4.
+\item Very High Impact: 0,8.
+\end{itemize}
+
+\begin{risk}{Frequent change of the requirements}
+\riskcat Requirements
+\riskimpact{Medium - 3} The project may get delayed.
+\end{risk}
+
+\begin{risk}{Negative attitude of final users with respect to the system}
+\riskcat Project conclussion
+\riskdesc A software application that is not used by its intended users after it has been released, must be considered as a failure. 
+\end{risk}
+
+\begin{risk}{Unexpected necessary features}
+\riskcat Requirements
+\riskdesc During the software development, some necessary functionalities that we have not taken into account might appear. If they are important or complex, they will affect the project planning in a significant way.
+\end{risk}
+
+\begin{risk}{Developed software does not meet customers' expectations}
+\riskcat Project conclussion
+\riskdesc There has been some misunderstandings between the customer's intentions (expected requirements) and those that have been implemented by the development. Getting customer's validation requires re-work.
+\end{risk}
+
+\begin{risk}{Localization inside buildings}
+\riskcat Requirements
+\riskdesc The design of a system that can locate an user is a difficult task. In the design stage, we can find that this is actually an impossible task even when our preliminary analysis revealed it was feasible.
+\end{risk}
+
+\begin{risk}{Error-prone UAM's authentication server interface}
+\riskcat External sources
+\riskdesc We don't completely trust that the interface with the UAM authentication server is well defined and correct. A defensive programming approach may be necessary.
+\end{risk}
+
+\begin{risk}{Changes in the interface with mobile phones}
+\riskcat Software development
+\riskdesc One of our target system are mobile phone operating systems. These are constantly changing and one of these changes may affect our project, either because of changed APIs or new or deprecated features.
+\end{risk}
+
+\begin{risk}{Lack of precedentness}
+\riskcat Software development
+\riskdesc Our available technical staff does not have experience neither in this type of application nor in the underlying technical architecture. This fact may delay the development of the project.
+\end{risk}
+
+\begin{risk}{Difficulty on defining algorithms}
+\riskcat Requirements
+\riskdesc We might encounter some difficulties while defining the two main algorithms of our software application: the automatic assignment of repair tasks to members of the maintenance service and the automatic assignment of priority to repair tasks.
+\end{risk}
+
+\begin{risk}{Problems with real time events/notifications}
+\riskcat Sotware development
+\riskdesc We might encounter some difficulties while dealing with real time events and notifications. For example, when technicians update the status of repair tasks they have just done, managers reassigned tasks or users receive notifications/messages; these are real-time events that should be processed as soon as posible.
+\end{risk}
+
+\begin{risk}{Higher number of users than expected}
+\riskcat Estimation
+\riskdesc We might have underestimated the number of users that will access the system at once. This means that there's a possibility that our server becomes overwhelmed with requests and can't attend them all.
+\end{risk}
+
+\begin{risk}{First collaboration with subcontracted companies}
+\riskcat Personnel management
+\riskdesc Two companies are expected to be subcontracted: UAMSOFT Systems will participate in the development of the project, and SOFTCOM will take care of the software updates and product licenses that are necessary. We have never worked with any these companies, so we don't know their capabilities nor their working methods.
+\end{risk}
+
+\begin{risk}{System failures in design during integration tests}
+\riskcat Project conclusion
+\riskdesc As we are working with another two companies, misunderstandings may appear and cause problems during the integration tests. If these companies are assigned some modules to implement, once they complete them, it is likely that their integration becomes a problem that we didn't noticed during the design phase.
+\end{risk}
+
+\begin{risk}{Inefficient task assignment and coordination with subcontracted companies}
+\riskcat Supervision and Monitoring
+\riskdesc If we don't reveice some feedback about the development of the tasks assigned to the subcontracted companies, our project management will feel the effects of this lack of coordination, resulting on a bad scheduling and delays.
+\end{risk}
+
+\begin{risk}{Poor management and planning decisions}
+\riskcat Supervision and Monitoring
+\riskdesc Lack of communication and information flow causes a bad organization and coordination between members of the development team. Bad planning causes losses of time (workers are not assigned new tasks to perform, so they are wainting for them instead of working), and in last term, delays in the whole project. 
+\end{risk}
+
+\begin{risk}{Delays in the calendar}
+\riskcat Supervision and Monitoring
+\riskdesc We might suffer from delays in the calendar with respect to the scheduling we had considered. These problems should be analyzed as soon as possible, in order to avoid that they propagate to other phases of the project.
+\end{risk}
+
+\begin{risk}{Excess of budget expenses}
+\riskcat Supervision and Monitoring
+\riskdesc We might suffer from excess of budget expenses with respect to the estimations we had considered. These problems should be analyzed as soon as possible, in order to avoid that they grow and multiply in the next phases of the project.
+\end{risk}
+
+\begin{risk}{Difficulties in maintaining the team united and motivated}
+\riskcat Project conclusion
+\riskdesc In the last stages of the development, there might have ocurred some quarrels or arguments between some members of the team, while others might get demotivated. These issues may affect the rhythm of the project development.
+\end{risk}
+
+\begin{risk}{Poor quality of the product}
+\riskcat Project conclusion
+\riskdesc Due to time and budget restrictions, the quality of the final product might be affected, which means that a re-work is needed. This problem also applies to the deliveries planified on the set of milestones.
+\end{risk}
+
+\begin{risk}{High rotation of personnel}
+\riskcat Personnel management
+\riskdesc The staff assigned to this project may suffer from rotations due to external causes that we can't control. We might have to deal with changes in the members of the development team, avoiding significant delays in the project duration.
+\end{risk}
+
+\begin{risk}{Underestimation of personnel needed}
+\riskcat Estimation
+\riskdesc During the development of the project, when revising the proportion of the project that we have done and the time we have spent on it, we might realize that we won't be able to finish it on time as a result of an underestimation of personnel needed. 
+\end{risk}
+
+\begin{risk}{Non-specific assignment of responsibilities}
+\riskcat Personnel management
+\riskdesc If roles of the team members and authorities are not well defined in the early stages of the development, the responsibility for problems that appear later won't be easily assigned anybody. Also, if disagreements appear in the team, there won't be a single person to decide the best solution (leading to the implementation of several different solutions at a time).
+\end{risk}
+
+\begin{risk}{Limited budget}
+\riskcat Estimation
+\riskdesc We have a 10\% less budget than the budget we had estimated in the FML Project Plan. Therefore, our budget is 114,120\euro (our estimation was 126,800\euro). In case we cannot deal with this limitation, the project might be cancelled.
+\end{risk}
+
+\begin{risk}{Limited duration}
+\riskcat Estimation
+\riskdesc The duration of the project must be a 10\% less than the duration we had estimated in the FML Project Plan. Therefore, our duration is 126 days (our estimation was 140 days). In case we cannot deal with this limitation, the project might be delayed or even cancelled.
+\end{risk}
