@@ -15,121 +15,133 @@ Among these possible categories, there are:
 \end{itemize}
 
 \begin{risk}{Frequent change of the requirements}
+\label{riskReqChange}
 \riskcat Requirements
 \riskdesc As in every software project, requirements may be subject to change if the customer identifies new needs or clarifies previously requested features.
 \end{risk}
 
 \begin{risk}{Negative attitude of final users with respect to the system}
+\label{riskAttitude}
 \riskcat Project conclusion
 \riskdesc A software application that is not used by its intended users after it has been released, must be considered as a failure.
 \end{risk}
 
 \begin{risk}{Unexpected necessary features}
+\label{riskFeaturesUnexpected}
 \riskcat Requirements
 \riskdesc During the software development, some necessary functionalities that we have not taken into account might appear. If they are important or complex, they will affect the project planning in a significant way.
 \end{risk}
 
 \begin{risk}{Developed software does not meet customers' expectations}
+\label{riskExpectations}
 \riskcat Project conclusion
 \riskdesc There has been some misunderstandings between the customer's intentions (expected requirements) and those that have been implemented by the development. Getting customer's validation requires re-work.
 \end{risk}
 
 \begin{risk}{Localization inside buildings}
+\label{riskLocalization}
 \riskcat Requirements
 \riskdesc The design of a system that can locate an user is a difficult task. In the design stage, we can find that this is actually an impossible task even when our preliminary analysis revealed it was feasible.
 \end{risk}
 
 \begin{risk}{Error-prone UAM's authentication server interface}
+\label{riskAuthServer}
 \riskcat External sources
 \riskdesc We don't completely trust that the interface with the UAM authentication server is well defined and correct. A defensive programming approach may be necessary.
 \end{risk}
 
 \begin{risk}{Changes in the interface with mobile phones}
+\label{riskPhone}
 \riskcat Software development
 \riskdesc One of our target system are mobile phone operating systems. These are constantly changing and one of these changes may affect our project, either because of changed APIs or new or deprecated features.
 \end{risk}
 
 \begin{risk}{Lack of precedences}
+\label{riskPrec}
 \riskcat Software development
 \riskdesc Our available technical staff does not have experience neither in this type of application nor in the underlying technical architecture. This fact may delay the development of the project.
 \end{risk}
 
 \begin{risk}{Difficulty on defining algorithms}
+\label{riskAlgorithms}
 \riskcat Requirements
 \riskdesc We might encounter some difficulties while defining the two main algorithms of our software application: the automatic assignment of repair tasks to members of the maintenance service and the automatic assignment of priority to repair tasks.
 \end{risk}
 
 \begin{risk}{Problems with real time events/notifications}
+\label{riskRealTime}
 \riskcat Software development
 \riskdesc We might encounter some difficulties while dealing with real time events and notifications. For example, when technicians update the status of repair tasks they have just done, managers reassigned tasks or users receive notifications/messages; these are real-time events that should be processed as soon as possible.
 \end{risk}
 
 \begin{risk}{Higher number of users than expected}
+\label{riskUserLoad}
 \riskcat Estimation
 \riskdesc We might have underestimated the number of users that will access the system at once. This means that there's a possibility that our server becomes overwhelmed with requests and can't attend them all.
 \end{risk}
 
 \begin{risk}{First collaboration with subcontracted companies}
+\label{riskCollaboration}
 \riskcat Personnel management
 \riskdesc Two companies are expected to be subcontracted: UAMSOFT Systems will participate in the development of the project, and SOFTCOM will take care of the software updates and product licenses that are necessary. We have never worked with any these companies, so we don't know their capabilities nor their working methods.
 \end{risk}
 
 \begin{risk}{System failures in design during integration tests}
+\label{riskIntegrationTests}
 \riskcat Project conclusion
 \riskdesc As we are working with another two companies, misunderstandings may appear and cause problems during the integration tests. If these companies are assigned some modules to implement, once they complete them, it is likely that their integration becomes a problem that we didn't noticed during the design phase.
 \end{risk}
 
 \begin{risk}{Inefficient task assignment and coordination with subcontracted companies}
+\label{riskAssignment}
 \riskcat Supervision and Monitoring
 \riskdesc If we don't receive some feedback about the development of the tasks assigned to the subcontracted companies, our project management will feel the effects of this lack of coordination, resulting on a bad scheduling and delays.
 \end{risk}
 
 \begin{risk}{Poor management and planning decisions}
+\label{riskManagement}
 \riskcat Supervision and Monitoring
 \riskdesc Lack of communication and information flow causes a bad organization and coordination between members of the development team. Bad planning causes losses of time (workers are not assigned new tasks to perform, so they are waiting for them instead of working), and in last term, delays in the whole project.
 \end{risk}
 
 \begin{risk}{Delays in the calendar}
+\label{riskDelays}
 \riskcat Supervision and Monitoring
 \riskdesc We might suffer from delays in the calendar with respect to the scheduling we had considered. These problems should be analyzed as soon as possible, in order to avoid that they propagate to other phases of the project.
 \end{risk}
 
 \begin{risk}{Excess of budget expenses}
+\label{riskBudget}
 \riskcat Supervision and Monitoring
 \riskdesc We might suffer from excess of budget expenses with respect to the estimations we had considered. These problems should be analyzed as soon as possible, in order to avoid that they grow and multiply in the next phases of the project.
 \end{risk}
 
 \begin{risk}{Difficulties in maintaining the team united and motivated}
+\label{riskMotivation}
 \riskcat Project conclusion
 \riskdesc In the last stages of the development, some quarrels or arguments may arise between some members of the team, while others might get demotivated. These issues may affect the rhythm of the project development.
 \end{risk}
 
 \begin{risk}{Poor quality of the product}
+\label{riskQuality}
 \riskcat Project conclusion
 \riskdesc Due to time and budget restrictions, the quality of the final product might be affected, which means that a re-work is needed. This problem also applies to the deliveries planed on the set of milestones.
 \end{risk}
 
 \begin{risk}{High rotation of personnel}
+\label{riskPersonnelRotation}
 \riskcat Personnel management
 \riskdesc The staff assigned to this project may suffer from rotations due to external causes that we can't control. We might have to deal with changes in the members of the development team, avoiding significant delays in the project duration.
 \end{risk}
 
 \begin{risk}{Underestimation of personnel needed}
+\label{riskPersonnelUnderestimation}
 \riskcat Estimation
 \riskdesc During the development of the project, when revising the proportion of the project that we have done and the time we have spent on it, we might realize that we won't be able to finish it on time as a result of an underestimation of personnel needed.
 \end{risk}
 
 \begin{risk}{Non-specific assignment of responsibilities}
+\label{riskResponsibilitesAssignment}
 \riskcat Personnel management
 \riskdesc If roles of the team members and authorities are not well defined in the early stages of the development, the responsibility for problems that appear later won't be easily assigned anybody. Also, if disagreements appear in the team, there won't be a single person to decide the best solution (leading to the implementation of several different solutions at a time).
-\end{risk}
-
-\begin{risk}{Limited budget}
-\riskcat Estimation
-\riskdesc We have a 10\% less budget than the budget we had estimated in the FML Project Plan. Therefore, our budget is 114,120\euro (our estimation was 126,800\euro). In case we cannot deal with this limitation, the project might be cancelled.
-\end{risk}
-
-\begin{risk}{Limited duration}
-\riskcat Estimation
-\riskdesc The duration of the project must be a 10\% less than the duration we had estimated in the FML Project Plan. Therefore, our duration is 126 days (our estimation was 140 days). In case we cannot deal with this limitation, the project might be delayed or even cancelled.
 \end{risk}
