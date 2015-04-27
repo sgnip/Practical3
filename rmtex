@@ -1,0 +1,20 @@
+#!/bin/zsh
+gettex=" grep input{ | awk -v FS=\"/\" '{print $2}' | awk -v FS=\"}\" '{print $1}')"
+
+
+inputs=$(cat RiskAnalysis.tex | grep input{ | awk -v FS="{" '{print $2}' | awk -v FS="}" '{print $1}' )
+tot=$(echo $inputs | wc -l)
+i=0;
+newf=""
+for file in $inputs; do
+	newf+=$(cat $file | grep input{ | awk -v FS="{" '{print $2}' | awk -v FS="}" '{print $1}')
+	newf+=" "
+done;
+rm -f borrame/*
+cp $newf $inputs borrame
+
+rm -f tex/*
+cp borrame/* tex
+rm -f borrame/*
+ltxmk
+echo $?
