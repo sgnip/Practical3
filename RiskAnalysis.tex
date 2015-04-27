@@ -22,8 +22,13 @@
 \usepackage{expl3}[2012-07-08]
 \usepackage{datatool}
 \usepackage{color, colortbl}
+\usepackage{nameref}
 
-\definecolor{tred}{rgb}{0.96,0.8,0.8}
+\definecolor{tred1}{rgb}{0.96,0.4,0.4}
+\definecolor{tred2}{rgb}{0.96,0.5,0.5}
+\definecolor{tred3}{rgb}{0.96,0.6,0.6}
+\definecolor{tred4}{rgb}{0.96,0.7,0.7}
+\definecolor{tred5}{rgb}{0.96,0.8,0.8}
 
 \hypersetup{
   	hyperindex,
@@ -79,16 +84,19 @@
 \newenvironment{risk}[2][]{
 	\ifthenelse{\equal{#1}{}}{
 		\refstepcounter{risks}
-		\def\riskcounter{\therisks}
+		\edef\riskcounter{\therisks}
 	}{
 		\def\riskcounter{\ref{#1}}
 		\edef\currentrisk{#1}
 	}
 	\subsubsection{Risk \riskcounter\ - #2}
+	\edef\@currentlabelname{#2}
 }{}
 
+\newcommand{\rref}[1]{\ref{#1} - \nameref{#1}}
+
 \newcommand{\riskcalc}[1]{%
-	\ref{#1} & \@nameuse{hashlink-prob-#1} & \@nameuse{hashlink-imp-#1} & \fpeval{\@nameuse{hashlink-prob-#1} * \@nameuse{hashlink-imp-#1} / 100}
+	\rref{#1} & \@nameuse{hashlink-prob-#1} & \@nameuse{hashlink-imp-#1} & \fpeval{\@nameuse{hashlink-prob-#1} * \@nameuse{hashlink-imp-#1} / 100}
 }
 \makeatother
 
