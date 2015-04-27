@@ -270,16 +270,7 @@ This section gathers the terms and abbreviations used along this document.
 
 \chapter{Risk management}
 \label{chapRiskManagement}
-
-The risks related to requirement specifications (\ref{riskReqChange}, \ref{riskAttitude}, \ref{riskFeaturesUnexpected}, \ref{riskExpectations}) can be managed ensuring that the client approves the requirements specified in the Requirements Specification Document. It's also necessary to get continuous feedback from the client to ensure that the system is catered to their needs and that any needed change or fix is detected as early as possible.
-
-About the risks related to novel features (risks \ref{riskLocalization}, \ref{riskAlgorithms}, \ref{riskRealTime}), given the time constraints it doesn't seem feasible to make prototypes and proof-of-concept applications to ensure that the features work. So, the only possible actions are mitigative: the system should be designed to work even if each feature can't be developed in time. For example, alternative input methods for localization should be implemented in order to mitigate risk \ref{riskLocalization}, and basic algorithms should be developed to avoid problems if the risk \ref{riskAlgorithms} materializes.
-
-To manage the risk of errors happening with the UAM's authentication API (risk \ref{riskAuthServer}), the system should be designing with the decoupling of the authentication server in mind. This approach will allow tests that are independent of the authentication server behavior, and will make a system resilient to changes in the authentication server interface.
-
-If the targeted phone operating system changes (risk \ref{riskPhone}), we can count on the fact that breaking changes are highly unlikely to occur. Even in that case, an initial launch of the system that doesn't target the new and breaking version of that operating system can be considered.
-
-To manage the lack of precedences in development (risk \ref{riskPrec}), if too many problems arise, an external expert consultant may be hired to solve them in a small amount of time, in order to avoid time delays and their corresponding costs.
+\input{tex/RiskManagement.tex}
 
 
 \chapter{Risk monitoring}
