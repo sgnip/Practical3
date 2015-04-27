@@ -20,7 +20,7 @@ The risks identified in section \ref{secRiskIdentification} are presented in tab
 \riskcalc{riskAlgorithms} \\ \hline
 \riskcalc{riskRealTime} \\ \hline % 10
 \riskcalc{riskUserLoad} \\ \hline
-\riskcalc{riskCollaboration} \\ \hline
+\rowcolor{tred4} \riskcalc{riskCollaboration} \\ \hline
 \riskcalc{riskIntegrationTests} \\ \hline
 \rowcolor{tred2} \riskcalc{riskAssignment} \\ \hline
 \riskcalc{riskManagement} \\ \hline % 15
@@ -29,14 +29,14 @@ The risks identified in section \ref{secRiskIdentification} are presented in tab
 \riskcalc{riskMotivation} \\ \hline
 \rowcolor{tred3} \riskcalc{riskQuality} \\ \hline
 \riskcalc{riskPersonnelRotation} \\ \hline % 20
-\rowcolor{tred4} \riskcalc{riskPersonnelUnderestimation} \\ \hline
+\riskcalc{riskPersonnelUnderestimation} \\ \hline
 \riskcalc{riskResponsibilitesAssignment} \\ \hline
 \end{tabular}
 \caption{Risk priority assessment based on impact and realization probabilities.}
 \label{tblRiskPriority}
 \end{table}
 
-Based on the priority calculation in table \ref{tblRiskPriority}, the most important risks are, in descending priority order, \rref{riskPrec}, \rref{riskAssignment}, \rref{riskQuality}, \rref{riskPersonnelUnderestimation} and \rref{riskDelays}.
+Based on the priority calculation in table \ref{tblRiskPriority}, the most important risks are, in descending priority order, \rref{riskPrec}, \rref{riskAssignment}, \rref{riskQuality}, \rref{riskCollaboration} and \rref{riskDelays}.
 
 \subsection{Breakpoints for the most significant risks}
 
@@ -46,6 +46,6 @@ For each of the risks, we will define the corresponding breakpoints. The risk ma
 \item \rref{riskPrec} - Project beginning. If the team sees too many unexpected problems in the application and architecture when the project is starting, it's likely that even more problems will arise later in development. In order to avoid extra costs and delays, the project should be canceled at this stage.
 \item \rref{riskAssignment} - Revisions at each increment. The increment finalization points are the best place to hold reviews about task assignment and coordination with the subcontracted companies, as every person involved will be able to reflect on what's been done and what can be done, if anything, to improve the situation. If the situation is bad can't be improved, the project should be canceled.
 \item \rref{riskQuality} - Testing phase. At the testing phase of each increment, the team should evaluate the adherence of the system to quality standards. If the quality is bad enough that significant rewrites and delays are needed, the project will have to be canceled.
-\item \rref{riskPersonnelUnderestimation} - Revisions at each increment. If the project doesn't have enough personnel to be completed, it should be decided at the end of each increment.
+\item \rref{riskCollaboration} - Revisions at each increment. If the companies don't have enough capabilities to achieve their assigned tasks, the project will not be able to be done. This will be assessed at each increment finalization.
 \item \rref{riskDelays} - Revisions at each increment stage. Given the time constraints for this project, no delay is admissible. Thus, we must detect them early and accommodate the schedule to avoid delays on the final delivery day. If it can't be accommodated, the project should be canceled in that moment to avoid incurring on extra costs.
 \end{enumerate}
