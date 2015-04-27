@@ -43,6 +43,7 @@
 }
 
 \newcounter{risks}[subsection]
+\renewcommand{\therisks}{\arabic{risks}}
 \newcommand{\header}[1]{\\ \indent \textbf{#1}\hspace{10pt}}
 
 \newcommand{\reqvertsep}{\vspace{-12pt}}
@@ -53,9 +54,13 @@
 \newcommand{\riskimpact}{\reqvertsep\subparagraph{Impact}}
 
 \newenvironment{risk}[2][]{
-	\ifthenelse{\equal{#1}{}}{}{\label{#1}}
-	\refstepcounter{risks}
-	\subsubsection{Risk \arabic{risks} - #2}
+	\ifthenelse{\equal{#1}{}}{
+		\refstepcounter{risks}
+		\def\riskcounter{\therisks}
+	}{
+		\def\riskcounter{\ref{#1}}
+	}
+	\subsubsection{Risk \riskcounter\ - #2}
 }{}
 
 
