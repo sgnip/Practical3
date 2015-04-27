@@ -18,6 +18,7 @@
 \usepackage{pdfpages}
 \usepackage{ifthen}
 \usepackage{etoolbox} % Comandos guays.
+\usepackage[nomessages]{fp}% http://ctan.org/pkg/fp
 
 \hypersetup{
   	hyperindex,
@@ -46,12 +47,26 @@
 \renewcommand{\therisks}{\arabic{risks}}
 \newcommand{\header}[1]{\\ \indent \textbf{#1}\hspace{10pt}}
 
+% Yay for hashtables in LaTeX.
+\newcommand\hashlinkprob[2]{%
+  \@namedef{hashlink-prob-#1}{#2}%
+}
+\newcommand\hashlinkimp[2]{%
+  \@namedef{hashlink-imp-#1}{#2}%
+}
+
 \newcommand{\reqvertsep}{\vspace{-12pt}}
 
 \newcommand{\riskcat}{\subparagraph{Category}}
 \newcommand{\riskdesc}{\reqvertsep\subparagraph{Description}}
-\newcommand{\riskprob}[1]{\reqvertsep\subparagraph{Probability} $#1 \%$}
-\newcommand{\riskimpact}{\reqvertsep\subparagraph{Impact}}
+\newcommand{\riskprob}[1]{
+	\hashlinkprob{\currentrisk}{#1}
+	\reqvertsep\subparagraph{Probability} $#1 \%$ -
+}
+\newcommand{\riskimpact}[1]{
+	\hashlinkimp{\currentrisk}{#1}
+	\reqvertsep\subparagraph{Impact} $#1$ -
+}
 
 \newenvironment{risk}[2][]{
 	\ifthenelse{\equal{#1}{}}{
@@ -59,9 +74,15 @@
 		\def\riskcounter{\therisks}
 	}{
 		\def\riskcounter{\ref{#1}}
+		\edef\currentrisk{#1}
 	}
 	\subsubsection{Risk \riskcounter\ - #2}
 }{}
+
+\newcommand{\riskcalc}[1]{%
+	\FPeval\rimpact{\@nameuse{hashlink-prob-#1}*\@nameuse{hashlink-imp-#1} / 100}% Calculate width dimension
+	\ref{#1} & \@nameuse{hashlink-prob-#1} & \@nameuse{hashlink-imp-#1} & \rimpact
+}
 
 
 \newcounter{reqs}[chapter]
