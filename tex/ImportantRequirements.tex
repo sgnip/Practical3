@@ -1,4 +1,5 @@
-% -*- root: ../ProjectPlan.tex -*-
+% -*- root: ../RiskAnalysis.tex -*-
+We include below the requirements that are relevant to the detected risks.
 
 \subsection{A-1 Notification of incidences}
 
@@ -15,28 +16,6 @@
 \reqout Location object.
 \end{requirement}
 
-\begin{requirement}{Incidences report}
-\reqdesc The system must allow users to report incidences.
-\reqin 
-\begin{itemize}
-	\item Compulsory external inputs:
-	\subitem Title.
-	\subitem Category.
-	\item Compulsory internal inputs:
-	\subitem Location object.
-	\item Optional external inputs:
-	\subitem Description of the problem.
-	\subitem Picture from gallery or taken on the fly (Optional).
-\end{itemize}
-\reqsteps The system saves into faults database a new record with additional information is added such as \textit{priority}.
-\reqout
-\begin{itemize}
-	\item Reported fault object.
-	\item Message to the maintenance personnel.
-	\item Notification to the reporter saying the report has been processed, including a brief summary so the user knows exactly which report has been processed.
-\end{itemize}
-\end{requirement}
-
 % % % % % % % Req2
 
 \subsection{A-2 Management of priorities}
@@ -51,17 +30,6 @@
 \end{requirement}
 
 
-\begin{requirement}{Messaging between users}
-\reqdesc The personnel in charge must be able to message the reporter of the incidence.
-
-\reqin The personnel in charge selects the incidence.
-
-\reqsteps The system connects both users.
-
-\reqout Both users can talk between them.
-\end{requirement}
-
-
 % % % % % % Req 3A
 \subsection{A-3 Supervision of incidences}
 \begin{requirement}{Assign incidences}
@@ -73,86 +41,5 @@
 \reqsteps The system will look for the technician in the staff database and for the fault report in the faults database. The status of the fault will be changed from 'Pending' to 'Assigned' and the fault will now be related to its technician.
 
 \reqout A confirmation message will be shown to the manager and the technician will receive a notification of the new task he/she has to fix.
-
-\end{requirement}
-
-
-\begin{requirement}{Show to a manager the list of members of his/her technical staff}
-
-\reqdesc Managers will be able to visualize an interactive list of members of the technical staff they are in charge of. The list will be interactive in the sense that the manager would be able to see more information about an specific technician (see next requirement).
-
-\reqin The manager has to introduce the name and/or the numeric identifier of the technician whose statistics and profile wants to see. Then, the manager will have to select one from the results of the search done.
-
-\reqsteps The system will use the criteria introduced by the manager to look for employees that match them. Then, it will show a list of the matchings and once the manager has chosen one of the list, the system will gather the corresponding information from the staff database (profile info) and the fault database (in order to generate statistics about the chosen technician).
-
-\reqout The system will show the manager the profile of the selected technician. In addition, it will also generate some statistics related to the labour performed by that technician.
-
-\end{requirement}
-
-
-\begin{requirement}{Get report of incidences}
-
-\reqdesc Managers will have access to a report on incidences. On one hand this report will show the incidences that are not solved or those that are being solved in order of priority. On the other hand, the incidences report will show in a similar way the last incidences that have been solved, sorted by
-their resolution date.
-
-\reqin The manager will trigger this action by selecting its corresponding option.
-
-\reqsteps The system will look into the faults database for fault reports that are not solved or they are being solved at the moment, and will order the results by priority. Then, in the same database, the system will filter by reports already solved and order them by resolution date. With these two sets of results, an interactive report will be produced.
-
-\reqout The system will show the manager the report produced by his/her request. This report is interactive in the sense that the manager can select one of the faults to see its characteristics.
-
-\end{requirement}
-
-
-
-\begin{requirement}{Generate statistics about incidences}
-
-\reqdesc Managers will be able to get statistics related to the tasks and to their related areas will be available in order to
-detect problematic areas or departments.
-
-\reqin The manager will trigger this function by selecting its corresponding option.
-
-\reqsteps The system will take all the information about incidences stored in the incidences database in order to analyze it and generate some statistics about them. Relevant information for the statistics will be the category, priority and location of tasks. Statistics will also take into account the costs of the repairs and the time elapsed from the detection of a fault until it has been solved (statistics about effectiveness and efficiency of fault troubleshooting).
-
-\reqout A report containing the statistics generated will be shown to the manager.
-
-\end{requirement}
-
-
-% % % % % % Req 4A
-
-\subsection{A-4 Management of priorities Categorization}
-\begin{requirement}{List all reports}\label{A4-ListAllReports}
-\reqdesc The system must allow listing all reported faults.
-\reqin 
-\begin{itemize}
- 	\item Some (or none) values to filter the list by, such as:
- 		\subitem Category.
- 		\subitem Priority.
- 		\subitem Location.
- \end{itemize}
-\reqsteps The system will search into the database all reports matching the given values. If a value is changed, the list must be filtered again with the new given values.
-\reqout External \textbf{query}: List of the reports matching with given values, ordered mainly by category and secondly by date. This list can be updated interactively by the user modifying filter values.
-\end{requirement}
-
-\begin{requirement}{Consult single report}
-\reqdesc Users will be able to check details of a reported fault from the full list of reports (given by \ref{A4-ListAllReports}).
-\reqin Fault reported object with all information attached.
-\reqout Report showing all the information attached to the object.
-\end{requirement}
-
-\begin{requirement}{Modify single report's priority}
-\reqdesc The system must allow modifying the priority given to a single report. 
-\reqin \begin{itemize}
-\item The report to be updated.
-\item The new priority to be stored.
-\end{itemize}
-\reqout \begin{itemize}
-	\item OK or Error message.
-	\item If OK:
-	\subitem New reported fault object with new information modified.
-	\subitem Updating database with new information.
-	\subitem Notification to all users related to the task (reporter and maintenance personnel assigned to it)
-\end{itemize}
 
 \end{requirement}
