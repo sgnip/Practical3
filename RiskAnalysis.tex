@@ -55,8 +55,32 @@
 \newenvironment{risk}[2][]{
 	\ifthenelse{\equal{#1}{}}{}{\label{#1}}
 	\refstepcounter{risks}
-	\subsection{Risk \arabic{risks} - #2}
+	\subsubsection{Risk \arabic{risks} - #2}
 }{}
+
+
+\newcounter{reqs}[chapter]
+\newcounter{NFreqs}[chapter]
+
+
+\newcommand{\reqdesc}{\subparagraph{Description}}
+\newcommand{\reqin}{\reqvertsep\subparagraph{Input data}}
+\newcommand{\reqout}{\reqvertsep\subparagraph{Output data}}
+\newcommand{\reqsteps}{\reqvertsep\subparagraph{Steps}}
+
+\newenvironment{requirement}[1]{
+	\refstepcounter{reqs}
+	\par {\noindent \bfseries {\textsc{Functional Requirement \arabic{reqs}} - #1}} \par
+}{\vspace{20pt}}
+
+\newenvironment{NFrequirement}[1]{
+	\par {\noindent \bfseries {\textsc{Non-Functional Requirement \arabic{NFreqs}}}} \par
+	\refstepcounter{NFreqs}
+}{\vspace{20pt}}
+
+\newcommand{\reqref}[1]{Req. \ref{#1}}
+
+
 
 \makeindex
 
@@ -77,160 +101,12 @@
 \label{chapPlan}
 \input{tex/Planning.tex}
 \input{tex/SystemCost.tex}
-\section{Importat requirements}
+\section{Important requirements}
 \input{tex/ImportantRequirements.tex}
 
 \chapter{Risk analysis}
 
 
-% % % % % % % % % % Product engineering 
-
-%
-\begin{risk}{Change of the requirements}
-\riskcat Requirements
-\riskdesc As in every software project, requirements may be subject to change if the client identifies new needs or clarifies previously requested features.
-\riskprob{30}.
-\riskimpact Very low - 1. Given that the requirements have been already approved by the client in the requirement analysis document.
-\end{risk}
-%
-\begin{risk}{Localization inside buildings}
-\riskcat Design
-\riskdesc The design of a system that can locate an user is a difficult task. In the design stage, we can find that this is actually an impossible tasks even when our preliminary analysis revealed that it cloud be done.
-\riskprob{60}
-\riskimpact High - 3.5. If the design can't be done, the requirements and design will need to be redone and there will be penalizations from the client.
-\end{risk}
-%
-\begin{risk}{Changes in the interface with the mobile phones}
-\riskcat Design
-\riskdesc One of your target system are mobile phone operating systems. These are constantly changing and one of these changes may affect our project, either because of changed APIs or new or deprecated features.
-\riskprob{70}
-\riskimpact Low - 1. Even when it's probable that there's an update during the development of the project, it will probably consist of minor changes and won't break compatibility.
-\end{risk}
-%
-\begin{risk}{Error-prone UAM's auth server interface}
-\riskcat Design
-\riskdesc We don't completely trust that the interface with the UAM authentication server is well defined and correct. A defensive programming approach may be necessary.
-\riskprob{30}
-\riskimpact Low - 2. If this risk materializes we will need to change our programming interfaces and extend the testing phase.
-\end{risk}
-%
-\begin{risk}{Unknown required performance}
-\riskcat Design
-\riskdesc We haven't estimated the number of users that will access the system at once. This means that there's a possibility that our server becomes overwhelmed with requests and can't attend them all.
-\riskprob{10} There's a low possibility that this kind of system becomes overloaded enough to require changes in the architecture or hardware.
-\riskimpact Low - 2. If the system can't accommodate all the requests, a hardware upgrade will probably be enough.
-\end{risk}
-
-
-% % % % % Code and Unit Test
-
-% Feasibility
-%
-\begin{risk}{Algorithm to assign task not defined}
-\riskcat Design
-\riskdesc We haven't defined the algorithm to automatically assign task to workers.
-\riskprob{100} We will have to deal with it for sure.
-\riskimpact{Medium - 3} If we don't prevent this risk, the programmers will have to spend time in defining this algorithm and the project may be delayed. 
-\end{risk}
-%
-\begin{risk}{Algorithm to assign priority not defined}
-\riskcat Design
-\riskdesc We haven't defined the algorithm to automatically assign priority to reports.
-\riskprob{100} We will have to deal with it for sure.
-\riskimpact{Medium - 3} If we don't prevent this risk, the programmers will have to spend time in defining this algorithm and the project may be delayed. 
-\end{risk}
-
-% Testing
-\begin{risk}{No test plan designed}
-\riskcat Design 
-\riskdesc We haven't designed the test plan.
-\riskprob{100} We will have to deal with it for sure.
-\riskimpact{High - 4} The programmers will have to spend time in defining the test plan and it may be not as extensive and exhaustive as a test plan done by designers. It may also affect to the project duration because testers will have to define the test plan on the go.
-\end{risk}
-
-% % % Integration and Test
-
-% Environment
-\begin{risk}{Difficult to test multi-user interaction}
-\riskcat Design
-\riskdesc  It will be difficult to develop realistic multi-user interaction for testing response requirements.
-\riskprob{100} We will have to deal with it for sure.
-\riskimpact{Very low - 1} We can apply statistics as we are used to do in SGNIP to estimate responses time in multi-user interaction scenarios.
-\end{risk}
-
-%Product
-
-\begin{risk}{Acceptance criteria for requirements}
-\riskcat  Design
-\riskdesc We haven't agreed an acceptance criteria in a formal agreement for all requirements.
-\riskprob{20} It is not very probable that UAM disagrees with us about the acceptance of requirements because of all the meetings we have had and the approve meanwhile.
-\textcolor{red}{Check grammar}
-% % % % % % % TODO:  Meanwhile¿¿?? I used gtraductor and i not very convinced.
-\riskimpact{Low} Even if there is not a formal agreement, UAM has approved the requirements so it shouldn't cause us a big problem. 
-\end{risk}
-
-% % % % TODO: System i don't know what to say. (Questions 55-59)
-
-
-% Maintainability
-%\begin{risk}
-%\riskcat Design
-%\riskdesc Web developing can change within the years and that could difficult maintainability because maintenance people may have to change code to adapt the system to new specifications.
-%\riskprob{20} When some new web standard is released it maintain compatibility with older systems.
-%\riskimpact{}
-%\end{risk}
-
-
-% % % % % % % % % % % % % % % % % % Development Environment
-
-%\begin{risk}
-%\riskcat Development Environment
-%\riskdesc We haven't defined requirements traceability that tracks requirements from source specification through test cases.
-%\riskprob{70}  
-%\riskimpact{}
-%\end{risk}
-
-% i jump from 117 to 142 because there are all questions about how we work in the company and i don't know anything and i don't want to invent either so, i go through.
-
-
-% % % % % % % Program constraints. 
-\begin{risk}{Subcontracted companies - Communication}
-\riskcat Development Environment
-\riskdesc There may be communication problems because we have subcontracted 2 company to help us with the development of the system.
-\riskprob{30} We are used to deal with subcontracted companies so we know how to deal with communication issues. It is not very probable to happen.
-\riskimpact{Medium - 3} When people working together can't communicate properly the development get delayed and looses quality.
-\end{risk}
-
-%
-\begin{risk}{Subcontracted companies - Assigning task}
-\riskcat Development Environment.
-\riskdesc As we are working with 2 subcontracted companies, we will have to take care of assigning task and submodules to developers.
-\riskprob{100} We will have to deal with it for sure.
-\riskimpact{Low - 2} It is not a very big problem because the project leader has to assign task even if there are not subcontracted, so this just make his job a bit harder.
-\end{risk}
-
-%
-\begin{risk}{Subcontracted companies - Integration test}
-\riskcat Development Environment.
-\riskdesc As we will not codify all submodules, integration test can get complicated.
-\riskprob{50} If every worker sticks to the project plan, to the the analysis and to the design we should get too much work in integration test.
-\riskimpact{Medium - 3} When integration test fails and we have to check someone else's code it get hard to get the integration done.
-\end{risk}
-%
-\begin{risk}{Money and time limitation}
-\riskcat Program constraints.
-\riskdesc The timing has been limited in time and money. We may have to cancel the project.
-\riskprob{75} Based on our experience, we are not positive that we can assume 10\% of the time and money 
-\riskimpact{Very high - 5} The project may get canceled. 
-\end{risk}
-
-
-\begin{risk}{Inexperienced staff}
-\riskcat Program constraints
-\riskdesc The staff is inexperienced in this kind of applications and architecture and they may not work according to the plan.
-\riskprob{70} According to our experience, when working with staff inexperienced it quite probable that the project get delayed.
-\riskimpact{Medium - 3} The project may get delayed.
-\end{risk}
 
 
 \section{Risk Identification}
@@ -241,28 +117,6 @@
 
 \chapter{Risk management}
 
-\subsection{Risk 1 - Change of the requirements}
-\subsection{Risk 2 - Localization inside buildings}
-\subsection{Risk 3 - Changes in the interface with the mobile phones}
-\subsection{Risk 4 - Error-prone UAM's auth server interface}
-\subsection{Risk 5 - Unknown required performance}
-\subsection{Risk 6 \& 7 - Algorithm to assign priority not defined}
-We can prevent this risk by assigning personnel to defined the algorithm to automatically assign task and automatically assign priorities during the development phase so it get defined and designed when programmers get to develop that part in the first increment. 
-
-The designer will have to work hard to get those algorithms defined in the first increment because is in the first increment when the task management will be developed.
-
-\subsection{Risk 8 \& 13 - No test plan designed}
-We have to define the test planning, taking into account that some parts of the system will be developed by an external company. 
-
-We have to reestimate also the time and money spend in defining this test plan.
-
-\subsection{Risk 9 - Difficult to test multi-user interaction}
-
-\subsection{Risk 10 - Acceptance criteria for requirements}
-\subsection{Risk 11 - Subcontracted companies - Communication}
-\subsection{Risk 12 - Subcontracted companies - Assigning task}
-\subsection{Risk 14 - Money and time limitation}
-\subsection{Risk 15 - Inexperienced staff}
 
 
 
