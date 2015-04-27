@@ -99,24 +99,23 @@ This is where our organization, Triforce, enters the scene: we have analyzed the
 
 \section{Purpose}
 
-The purpose of this Project Plan document is to provide a detailed description of the requirements for the project and estimations of the size of the whole system. Based on these aspects, we introduce our proposed planning for the development, including related estimates such as cost and duration.
+The purpose of this Risk Analysis document is to provide a detailed description of the risks associated with this project, given the current constraints of time and budget. A plan for monitoring, prevention and mitigation of risks is also presented.
 
-The intended audience of this document is the executive team of Triforce, in order to know and evaluate the resource allocation for the project and its fit in the company and its activities.
+The intended audience of this document is the executive team of Triforce, in order to know and evaluate the risks that this project carries.
 
 \section{Structure}
 
 The document is structured as follows. This chapter serves as introduction and description of the document and its contents.
 
-Chapter \ref{chapReferences} contains the references used to define, analyze and estimate risk.
+Chapter \ref{chapReferences} contains the references used to define, analyze and estimate the risks of the project.
 
 In chapter \ref{chapDef} we review the project definition and the subsystems it has.
 
-Our planned schedule and cost estimations is presented in chapter \ref{chapPlan}. We also include some important requirements of the project.
+Our planned schedule and cost estimations is presented in chapter \ref{chapPlan}. We also include some important requirements of the project, the ones related to our detected risks.
 
+Finally, chapters \ref{chapRiskAnalysis}, \ref{chapRiskManagement} and \ref{chapRiskMonitoring} includes the analysis (identification and estimation) of the risk in FML project, how we plan to management them and finally the monitoring process we will use to ensure the risk don't materialize.
 
-Finally, chapters \ref{chapRiskAnalysis}, \ref{chapRiskManagement} and \ref{chapRiskMonitoring} includes the analysis (identification and estimation) of the risk in FML project, how we plan to management them and finally the monitoring process we will use to ensure the risk don't arise.
-
-The appendices contain extra information, such as the riskology tool (appendix (\ref{chapRiskology}and the detailed Gantt diagram (appendix \ref{chapGantt}).
+The appendices contain extra information, such as the Riskology tool output (appendix \ref{chapRiskology}) and the detailed Gantt diagram (appendix \ref{chapGantt}).
 
 \section{Scope}
 
@@ -128,15 +127,15 @@ Other main goal of the application is the equalization of the working way of the
 
 Fault Manager Lite will use the UAM's authentication system in order to access the application; therefore, it will not substitute the current authentication system nor store in its own database any UAM's credentials. However, the application will have its own users database in order to properly manage them inside its limits (i.e. for banning or messaging reasons).
 
-The requirements analysis contained in this document has two fundamental objectives: the first one, to serve as a first version for its valoration by the client company (in this case, the UAM), who will be able to specify if they want any extra functionality or, on the contrary, they want to quit any of the extracted requirements; the other one, it will be used as a basis for the system size estimation that will let us know the approximate duration, personnel needed and expected costs of the project. Therefore, the requirements are not definitive in any way, and can be extended or modificed in the analysis phases that will be performed during the development.
+The requirements analysis contained in this document has two fundamental objectives: the first one, to serve as a first version for its review by the client company (in this case, the UAM), who will be able to specify if they want any extra functionality or, on the contrary, they want to quit any of the extracted requirements; the other one, it will be used as a basis for the system size estimation that will let us know the approximate duration, personnel needed and expected costs of the project. Therefore, the requirements are not definitive in any way, and can be extended or modified in the analysis phases that will be performed during the development.
 
-The project plan obtained from the estimations will be the one used if the direction of Triforce approves the estimated costs and duration as long as the client doesn't ask for changes on the requirements that can cause great variations in the estimated effor. On the contrary, a new version of the project plan that considers the new conditions will be needed.
+The project plan obtained from the estimations will be the one used if the direction of Triforce approves the estimated costs and duration as long as the client doesn't ask for changes on the requirements that can cause great variations in the estimated effort. On the contrary, a new version of the project plan that considers the new conditions will be needed.
 
 \section{Responsibilities}
 
-For FML project organization purposes, a several charges of responsibility have been designated as seen in Table \ref{tbl_Responsibilities} depending on the perfomance and abilities shown in previous projects developed in Triforce.
+For FML project organization purposes, a several charges of responsibility have been designated as seen in Table \ref{tbl_Responsibilities} depending on the performance and abilities shown in previous projects developed in Triforce.
 
-Each one of these responsibles will be in charge of the management and coordination of its dedicated section, as well as the communication with other sections implied in the project.
+Each one of these persons will be in charge of the management and coordination of its dedicated section, as well as the communication with other sections implied in the project.
 
 
 \begin{table}[hbtp]
@@ -156,22 +155,24 @@ Each one of these responsibles will be in charge of the management and coordinat
 
 This section gathers the terms and abbreviations used along this document.
 
-\emph{FML: } Fault Manager Lite, the application whose development we are planning in this document.
+\begin{itemize}
+\item \emph{FML}: Fault Manager Lite, the application whose development we are planning in this document.
 
-\emph{UAM: } Universidad Autónoma de Madrid, the client who has requested the development of the application.
+\item \emph{UAM}: Universidad Autónoma de Madrid, the client who has requested the development of the application.
 
-\emph{FP: } Function Points.
+\item \emph{FP}: Function Points.
 
-\emph{UFP: } Unadjusted Function Points.
+\item \emph{UFP}: Unadjusted Function Points.
 
-\emph{AF: } Adjusting Factor.
+\item \emph{AF}: Adjusting Factor.
 
-\emph{AFP: } Adjusted Function Points.
+\item \emph{AFP}: Adjusted Function Points.
 
-\emph{Person-day: } Estimation of effort given by FP.
+\item \emph{Person-day}: Estimation of effort given by FP.
+\end{itemize}
 
-
-\section{Reference Documentation}
+\chapter{References}
+\label{chapReferences}
 \begin{table}[hbtp]
 \centering
 \begin{tabular}{|c|p{10cm}|} \hline
@@ -181,8 +182,6 @@ This section gathers the terms and abbreviations used along this document.
 \end{tabular}
 \end{table}
 
-\chapter{References}
-\label{chapReferences}
 \chapter{Project definition}
 \label{chapDef}
 \input{tex/Subsystems.tex}
