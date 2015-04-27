@@ -42,7 +42,7 @@
 	\rfoot{}
 }
 
-\newcounter{risks}[section]
+\newcounter{risks}[subsection]
 \newcommand{\header}[1]{\\ \indent \textbf{#1}\hspace{10pt}}
 
 \newcommand{\reqvertsep}{\vspace{-12pt}}
@@ -90,8 +90,99 @@
 \newpage
 \chapter{Introduction}
 
-\chapter{References}
 
+\label{chapIntroduction}
+
+The Autonomous University of Madrid (UAM) has reported the numerous problems it has detecting faults that arise on its campus and its facilities, whose reparation usually takes excessive time and is poorly organized. A late detection of faults in the facilities delays its reparation, stopping its users to continue using them as normal and complicating the maintenance staff labor. Regarding the wishes of the campus users and realizing the potential maintenance problems it has, the UAM has organized a contest to choose the best project proposal that solves them.
+
+This is where our organization, Triforce, enters the scene: we have analyzed the problem exhaustively and designed a web application, Fault Manager Lite (FML), that meets all the requirements expected, solves the problems and also includes new extra features that makes it even more useful.
+
+\section{Purpose}
+
+The purpose of this Project Plan document is to provide a detailed description of the requirements for the project and estimations of the size of the whole system. Based on these aspects, we introduce our proposed planning for the development, including related estimates such as cost and duration.
+
+The intended audience of this document is the executive team of Triforce, in order to know and evaluate the resource allocation for the project and its fit in the company and its activities.
+
+\section{Structure}
+
+The document is structured as follows. This chapter serves as introduction and description of the document and its contents. 
+
+Chapter \ref{chapReferences} contains the references used to define, analyze and estimate risk.
+
+In chapter \ref{chapDef} we review the project definition and the subsystems it has.
+
+Our planned schedule and cost estimations is presented in chapter \ref{chapPlan}. We also include some important requirements of the project.
+
+
+Finally, chapters \ref{chapRiskAnalysis}, \ref{chapRiskManagement} and \ref{chapRiskMonitoring} includes the analysis (identification and estimation) of the risk in FML project, how we plan to management them and finally the monitoring process we will use to ensure the risk don't arise.
+
+The appendices contain extra information, such as the riskology tool (appendix (\ref{chapRiskology}and the detailed Gantt diagram (appendix \ref{chapGantt}).
+
+\section{Scope}
+
+The final goal of the system we want to develop is integrating in a single application an user-friendly report system of faults on the facilities of the UAM campus with an efficient repair task manager for the maintenance staff of the UAM. Moreover, the application will provide statistics of the reported faults and will count with extra features such as a notification and messaging system which may serve as a communication channel between campus members and campus technicians. 
+
+What makes this system unique and useful for the UAM is the union of different features (report system and task management) from other applications, but specially designed taking into account the UAM's maintenance service current needs. More information and exhaustive analysis about other similar applications can be found in Fault Manager Lite SRS[1].
+
+Other main goal of the application is the equalization of the working way of the different departments of the maintenance service. Nowadays they are self-organized and they lack of much coordination, which leads to a continuous loss of time in the troubleshooting of faults. Therefore, this application aims to substitute the organization methods of the different maintenance departments.
+
+Fault Manager Lite will use the UAM's authentication system in order to access the application; therefore, it will not substitute the current authentication system nor store in its own database any UAM's credentials. However, the application will have its own users database in order to properly manage them inside its limits (i.e. for banning or messaging reasons).
+
+The requirements analysis contained in this document has two fundamental objectives: the first one, to serve as a first version for its valoration by the client company (in this case, the UAM), who will be able to specify if they want any extra functionality or, on the contrary, they want to quit any of the extracted requirements; the other one, it will be used as a basis for the system size estimation that will let us know the approximate duration, personnel needed and expected costs of the project. Therefore, the requirements are not definitive in any way, and can be extended or modificed in the analysis phases that will be performed during the development.
+
+The project plan obtained from the estimations will be the one used if the direction of Triforce approves the estimated costs and duration as long as the client doesn't ask for changes on the requirements that can cause great variations in the estimated effor. On the contrary, a new version of the project plan that considers the new conditions will be needed.
+
+\section{Responsibilities}
+
+For FML project organization purposes, a several charges of responsibility have been designated as seen in Table \ref{tbl_Responsibilities} depending on the perfomance and abilities shown in previous projects developed in Triforce.
+
+Each one of these responsibles will be in charge of the management and coordination of its dedicated section, as well as the communication with other sections implied in the project.
+
+
+\begin{table}[hbtp]
+\centering
+\begin{tabular}{|c|p{5cm}|} \hline
+\textbf{Project Leader} & Guillermo Julián Moreno \\ \hline
+\textbf{Project Head} & Víctor de Juan Sanz \\ \hline
+\textbf{Project Quality Manager} & Iván Márquez Pardo \\ \hline
+\textbf{Project Documentation Manager} & Guillermo Julián Moreno \\ \hline
+\textbf{Customer Representative} & Víctor de Juan Sanz \\ \hline
+\end{tabular}
+\caption{People in charge of the FML project.}
+\label{tbl_Responsibilities}
+\end{table}
+
+\section{Definitions}
+
+This section gathers the terms and abbreviations used along this document.
+
+\emph{FML: } Fault Manager Lite, the application whose development we are planning in this document.
+
+\emph{UAM: } Universidad Autónoma de Madrid, the client who has requested the development of the application.
+
+\emph{FP: } Function Points.
+
+\emph{UFP: } Unadjusted Function Points.
+
+\emph{AF: } Adjusting Factor.
+
+\emph{AFP: } Adjusted Function Points.
+
+\emph{Person-day: } Estimation of effort given by FP.
+
+
+\section{Reference Documentation}
+\begin{table}[hbtp]
+\centering
+\begin{tabular}{|c|p{10cm}|} \hline
+\textbf{Reference} & Title \\ \hline
+1 & Fault Manager Lite Software Requirements Specification \\ \hline
+2 & \url{http://csse.usc.edu/csse/research/COCOMOII/cocomo2000.0/CII_modelman2000.0.pdf} \\ \hline
+\end{tabular}
+\end{table}
+
+\chapter{References}
+\label{chapReferences}
 \chapter{Project definition}
 \label{chapDef}
 \input{tex/Subsystems.tex}
@@ -106,22 +197,25 @@
 
 \chapter{Risk analysis}
 
-
+\label{chapRiskAnalysis}
 
 
 \section{Risk Identification}
+\label{secRiskIdentification}
 \input{tex/RiskIdentification.tex}
 
 \section{Risk Estimation}
+\label{secRiskEstimation}
 \input{tex/RiskEstimation.tex}
 
 \chapter{Risk management}
-
+\label{chapRiskManagement}
 
 
 
 
 \chapter{Risk monitoring}
+\label{chapRiskMonitoring}
 
 
 \chapter{Conclusions}
@@ -129,5 +223,13 @@
 \appendix
 
 \chapter{Riskology tool}
+\label{chapRiskology}
+
+
+\chapter{Gantt Diagram}
+\label{chapGantt}
+Included below is the Gantt diagram generated
+
+\includepdf[scale=0.8, pages={1-}, nup=1x2, pagecommand={}]{Project.pdf}
 
 \end{document}
