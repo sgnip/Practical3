@@ -121,7 +121,7 @@ The appendices contain extra information, such as the Riskology tool output (app
 
 The final goal of the system we want to develop is integrating in a single application an user-friendly report system of faults on the facilities of the UAM campus with an efficient repair task manager for the maintenance staff of the UAM. Moreover, the application will provide statistics of the reported faults and will count with extra features such as a notification and messaging system which may serve as a communication channel between campus members and campus technicians.
 
-What makes this system unique and useful for the UAM is the union of different features (report system and task management) from other applications, but specially designed taking into account the UAM's maintenance service current needs. More information and exhaustive analysis about other similar applications can be found in Fault Manager Lite SRS[1].
+What makes this system unique and useful for the UAM is the union of different features (report system and task management) from other applications, but specially designed taking into account the UAM's maintenance service current needs. More information and exhaustive analysis about other similar applications can be found in Fault Manager Lite SRS \cite{requirements15}.
 
 Other main goal of the application is the equalization of the working way of the different departments of the maintenance service. Nowadays they are self-organized and they lack of much coordination, which leads to a continuous loss of time in the troubleshooting of faults. Therefore, this application aims to substitute the organization methods of the different maintenance departments.
 
@@ -173,14 +173,23 @@ This section gathers the terms and abbreviations used along this document.
 
 \chapter{References}
 \label{chapReferences}
-\begin{table}[hbtp]
-\centering
-\begin{tabular}{|c|p{10cm}|} \hline
-\textbf{Reference} & Title \\ \hline
-1 & Fault Manager Lite Software Requirements Specification \\ \hline
-2 & \url{http://csse.usc.edu/csse/research/COCOMOII/cocomo2000.0/CII_modelman2000.0.pdf} \\ \hline
-\end{tabular}
-\end{table}
+\let\oldchapter\chapter
+\renewcommand{\chapter}[2]{}
+\begin{thebibliography}{9}
+\bibitem{requirements15}
+  Triforce,
+  \emph{Fault Manager Lite - Technical report},
+  v1.0,
+  2015.
+
+\bibitem{taxonomy93}
+	Marvin J. Carr, L. Suresh Konda, Ira Monarch, Carol F. Ulrich, F. Clay Walker,
+	\emph{Taxonomy-based Risk Identification}.
+	Technical Report CMU / SEI-93-TR-6 ESC-TR 93- 183,
+	June 1993.
+
+\end{thebibliography}
+\let\chapter\oldchapter
 
 \chapter{Project definition}
 \label{chapDef}
