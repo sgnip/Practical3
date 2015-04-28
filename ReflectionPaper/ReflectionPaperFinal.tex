@@ -1,0 +1,69 @@
+\documentclass{report}
+
+\usepackage{fancyhdr} % Cabeceras de página
+\usepackage{lastpage} % Módulo para añadir una referencia a la última página
+\usepackage{titling} % No tengo claro para qué es esto
+\usepackage[left=3cm,right=2.5cm,top=3cm,bottom=2cm]{geometry} % Márgenes
+\usepackage[T1]{fontenc}
+\usepackage[utf8x]{inputenc}
+\usepackage{xspace}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{wrapfig}
+\usepackage{hyperref}
+
+\hypersetup{
+  	hyperindex,
+    colorlinks,
+    allcolors=blue!60!black
+}
+
+\newcommand{\header}[1]{\\ \indent \textbf{#1}\hspace{10pt}}
+
+\setcounter{secnumdepth}{3}
+
+\title{SOFTWARE ENGINEERING PROJECT\\Assignment 1 - Reflective Document}
+\date{\today}
+\author{Practicals Group 2451 - Team n. 3 \\ \vspace{5pt} \textit{Iván Márquez Pardo, Víctor de Juan Sanz, Guillermo Julián Moreno}}
+
+\fancyhf{}
+\fancypagestyle{plain}{%
+	\lhead{\small \itshape Assignment 1 - Reflective Document \, -\, \thedate\, -\, SEPRO}
+	\rhead{\vspace{-20pt} \includegraphics[width =40 pt]{../Logo.jpg}}
+	\cfoot{\thepage\ of \pageref{LastPage}}
+	\rfoot{}
+}
+
+\begin{document}
+\maketitle
+\pagestyle{plain}
+\chapter{Practical Assignment 1}
+\input{ReflectionPaper1.tex}
+\chapter{Practical Assignment 2}
+\input{ReflectionPaper2.tex}
+\chapter{Practical Assignment 3}
+\input{ReflectionPaper3.tex}
+
+\section{Deliverable details}
+
+\noindent
+\header{Date} \today.
+\header{Deliverable} Practical assignment 1.
+\header{Submission date} February 23, 2015.
+
+\section{Content and procedure}
+\subsection{Practical assignment procedure}
+\subsection{Strengths of the practical assignment procedure}
+\subsection{Possible improvements of the practical assignment procedure}
+\section{Comments on the evolution and progression of the practical assignments}
+\section{Problems identified during the term (practical assignments)}
+\section{Learning / knowledge acquired during the term (practical assignments)}
+\section{Reflection on and analysis of the work completed during the term}
+\section{Justification of the major portfolio contents}
+\section{Justification of the hardest portfolio contents to perform}
+\section{Skills developed as a result of the work performed throughout the term}
+\section{Importance and applicability of portfolio production for your future profession}
+\section{Observations}
+
+
+\end{document}
