@@ -2,7 +2,7 @@
 
 build_dirs=". ReflectionPaper"
 delivery_dir="SEPRO-2401_P3E3"
-delivery_files="RiskAnalysis.pdf"
+delivery_files="RiskAnalysis.pdf ReflectionPaper/ReflectionPaper.pdf"
 
 for dir in $build_dirs; do
 	cwd="$(pwd)"
