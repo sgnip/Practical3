@@ -1,0 +1,23 @@
+#!/bin/bash
+
+build_dirs=". ReflectionPaper"
+delivery_dir="SEPRO-2401_P3E3"
+delivery_files="RiskAnalysis.pdf ReflectionPaper/ReflectionPaperFinal.pdf"
+
+for dir in $build_dirs; do
+	cwd="$(pwd)"
+	cd "$dir"
+	if ! latexmk -pdf -silent ; then
+		echo "Error building LaTeX in $dir"
+		exit 1
+	fi
+	cd "$cwd"
+done
+
+
+mkdir -p $delivery_dir
+
+cp -rv $delivery_files $delivery_dir
+
+zip -r ${delivery_dir}.zip $delivery_dir
+rm -r $delivery_dir
