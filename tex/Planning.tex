@@ -3,6 +3,8 @@
 \label{secTimeEstimation}
 \subsection{Gantt diagram}
 
+This is the old Gantt diagram that is still quite useful. We don't consider important to update the gantt diagram because the changes made are minor changes, just some requirements removed to reduce timing.
+
 \begin{figure}[hbtp]
 \centering
 \includegraphics[width=0.8\textwidth]{img/GanttDiagram.png}
@@ -35,7 +37,22 @@ As the time we had has been limited (10\% less than our initial estimation), we 
 \label{tblIncrementsSubsystems}
 \end{table}
 
-As we can see in the efforts of each subsystems, they have changed. We have 10\% function points less, so we will finish 10\% earlier. The removed functionalities belonged to the messaging module and to the statistics module, the ones we thought that there were more dispensable. 
+As we can see in the efforts of each subsystems, they have changed. We have 10\% function points less, so we will finish 10\% earlier. The removed functionalities belonged principally to the messaging module and to the statistics module, the ones we thought that there were more dispensable.
+
+The \textbf{removed requirements are} 
+
+\begin{itemize}
+\item Messaging module:
+\subitem[21] Send messages to users.
+\subitem[22] Read messages of a selected report.
+\item Statistics:
+\subitem[36] Generate statistics about incidences. (This requirement was just simplified to include less functionalities)
+\subitem[37] Generate PDF file from report.
+\item Fault system report
+\subitem[26] See fault history (Even this requirement is removed, the functionality can be achieved by listing all reports (requirement 32) and check history of a reported fault (requirement 29)).
+\end{itemize}
+
+
 
 In table \ref{tblSubsystemsAssignedIncrement} one can see the effort for each subsystem, and one can corroborate that the affected ones are messaging and statistics.
 
