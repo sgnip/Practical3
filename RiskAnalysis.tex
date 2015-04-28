@@ -323,6 +323,24 @@ This section gathers the terms and abbreviations used along this document.
 \chapter{Riskology tool}
 \label{chapRiskology}
 
+\begin{figure}[p]
+\centering
+\includegraphics[width=0.8\textwidth]{img/Riskology.png}
+\caption{Riskology predictions for project finalization}
+\label{figRiskology}
+\end{figure}
+
+We've used the Riskology tool \cite{riskology} to evaluate the risks of the project and the expected delays. We've used the probabilities from section \ref{secRiskEstimation} and adjusted the impact to the paradigm of this tool (e.g., our ``very high'' impact is not actually a 80\% delay). Table \ref{tblRiskologyImpact} reflects the used impacts, measured either in relative or absolute (months) delays from the estimated durations. All risks are binary, and the risk corresponding to delays (\rref{riskDelays}) is set as a fatal risk.
+
+\begin{table}[p]
+\centering
+\begin{tabular}{c|ccccc}
+\textbf{Risk} & \ref{riskPrec} & \ref{riskAssignment} & \ref{riskQuality} & \ref{riskCollaboration} & \ref{riskDelays} \\ \hline
+\textbf{Delay} & 30 \% & 20 \% & 1 month & 2 months & Fatal
+\end{tabular}
+\caption{Impacts used for risk calculations in Riskology.}
+\label{tblRiskologyImpact}
+\end{table}
 
 \chapter{Gantt Diagram}
 \label{chapGantt}
